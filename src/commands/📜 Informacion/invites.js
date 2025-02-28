@@ -8,7 +8,7 @@ module.exports = class ServerInfoCommand extends Command {
       name: 'invites',
       alias: ['invitaciones'],
       usage: ['invites'],
-      description: ['Get to know all our new news.', 'Mira cuantas invitaciones tiene un usuario del serrvidor.'],
+      description: ['See how many invitations a server user has.', 'Mira cuantas invitaciones tiene un usuario del servidor.'],
       cooldown: 5,
       category: 'Info',
     });
