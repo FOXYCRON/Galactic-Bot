@@ -44,7 +44,7 @@ function sendError(e, message, client, lang) {
 			// `Ha habido un error en **${message.guild.name} [ID Server: ${message.guild.id}] [ID Usuario: ${message.author.id}] [Owner: ${message.guild.ownerId}]**. Numero de usuarios: **${message.guild.memberCount}**\nMensaje: ${message.content}\n\nError: ${e}\n\n**------------------------------------**`,
 		);
 	} catch (err) {
-		console.log('Perros errores xd' + err);
+		console.log('Perros errores xd ' + err);
 	}
 }
 module.exports = { formatBytes, sendError };

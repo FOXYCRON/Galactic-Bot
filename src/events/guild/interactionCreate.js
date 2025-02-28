@@ -11,7 +11,7 @@ module.exports = class Interaction extends Event {
 
 		// await asegurar_todo(interaction.guild.id, interaction.author.id);
 		// const data = await Schema.findOne({ guildID: interaction.guild.id });
-
+		
 		commandRunInte(this.client);
 
 		async function commandRunInte(client) {
