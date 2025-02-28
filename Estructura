@@ -1,0 +1,27 @@
+/*
+
+const Command = require('../../structures/Commands.js');
+const { sendError } = require('../../utils/utils.js');
+const Discord = require('discord.js');
+
+module.exports = class Eval extends Command {
+	constructor() {
+		super({
+			name: 'eval',
+			alias: ['ev'],
+			description: ['Evalue the code.', 'Evalua un código.'],
+			cooldown: 5,
+			category: 'Owner', // Cambiar categoria: Owner, Info, etc
+			// subcommands: ['listening', 'watching', 'playing'],
+			usage: ['<listening/watching/playing> <status>', '<listening/watching/playing> <estado>'],
+			example: ['awaxd', '<listening/watching/playing> <estado>'],
+			owner: true,
+		});
+	}
+	async run(client, message, args, lang) {
+
+
+
+};
+
+*/

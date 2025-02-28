@@ -1,0 +1,333 @@
+{
+	"cmds": {
+		"messageCreate": {
+			"mencionbot": {
+				"title": "Hola!",
+				"desc": "Soy **{{client}}**, Mi prefix pincipal es `!!`\naqui es `{{prefix}}`\n Usa `{{prefix}} help` para ver los comandos que tengo"
+			},
+			"permisos": {
+				"permisosEmbeds": "No tengo permisos para enviar embeds (`EmbedLinks`).",
+				"permisosEmojis": "No tengo permisos para enviar emojis externos"
+			},
+			"cmds2": {
+				"cmdInactive": "El comando esta inactivó",
+				"cmdArgs": "Faltaron argumentos al ejecutar el comando.",
+				"cmdArgsUsage": "\n<:right2:999190066813481011> Uso: `{{prefix}}{{usage}}`\n<:right2:999190066813481011> Ejemplo: `{{prefix}}{{example}}`\n<:right2:999190066813481011> Sintaxis: `<>` = Requerido, `[]` = Opcional",
+				"cooldown": "No puedes usar el comando durante {{seg}} segundos",
+				"permsBot": "{{no}} || Necesito el permiso `{perm}` para realizar la acción.",
+				"permsUser": "{{no}} || Necesitas el permiso `{perm}` para utilizar este comando.",
+				"chatnsfw": "{{no}} || No puedes utilizar este comando en un chat que no es de **NSFW**.",
+				"voice": "{{no}} || Debes estar en un canal de voz para utilizar este comando",
+				"dis-cmd": "El comando **{{cmd}}** Esta desactivado"
+			}
+		},
+		"antiCrash": {
+			"embed": {
+				"errorMsg": "**Ha ocurrido un error al ejecutar este comando\nReporte en el servidor de soporte**",
+				"title": "Error",
+				"desc": "Ha ocurrido un error fatal. Ha sido comunicado a los desarrolladores, por favor, espere en lo que se arregla."
+			}
+		},
+		"configuracion": {
+			"antimayus": {
+				"perms": "No tienes permiso de hacer esto",
+				"activado": "Este servidor ya tiene **activado** el anti mayus",
+				"default": "Ahora los mensajes con mas del `70%` porciento seran eliminados",
+				"off": "<a:no:990150535258714133> Este servidor no tiene activado anti-mayuscula",
+				"on": "<a:si:990150545782222899> Se ha deshabilitado anti mayusculas",
+				"numero": "<a:no:990150535258714133> No has colocado un numero",
+				"mayor": "<a:no:990150535258714133> No puedes poner un numero mayor a 100 o menor a 10",
+				"porcentaje": "<a:si:990150545782222899> Ahora cualquier mensaje con un porcentaje de `{porcentaje}` o mas de mayusculas sera eliminado",
+				"menor": "<a:no:990150535258714133> No puedes poner un numero menor a 10",
+				"mayor2": "<a:no:990150535258714133> No puedes poner un numero mayor a 1000",
+				"min2": "Minimo de caracteres",
+				"config": "<a:gears:1007451774334029896> Configuraciones",
+				"porcentaje2": "Porcentaje",
+				"options": "<a:no:990150535258714133> Esa opcion no existe Puedes usar anti-mayus `on | off | porcentaje | min | options`",
+				"min": "<a:si:990150545782222899> Ahora solo se evaluaran mensajes con mas de `{min}` caracteres"
+			},
+			"disable-cmd": {
+				"error": "No has especificado el comando",
+				"error2": "El comando no existe",
+				"error3": "El comando {cmd} ya esta desactivado",
+				"desactivado": "Se desactivo el comando **{cmd}**"
+			},
+			"enable-cmd": {
+				"error": "No has especificado el comando",
+				"error2": "El comando no existe",
+				"activado": "Se activo el comando **{cmd}**",
+				"error3": "Ese comando ya esta activado..."
+			},
+			"ignorechannel": {
+				"canal1": "Debes especificar un canal",
+				"sihaycanal": "El canal {canalname} ya esta marcado como ignorar",
+				"confirmacion": "El canal {canalname} ahora esta marcado como canal a ignorar",
+				"all": "Ahora respondere a mensajes en todos los canales del servidor",
+				"canal2": "Debes especificar un canal para remover",
+				"sinoesta": "El canal {canalname} no esta marcado como ignorar",
+				"siesta": "Ahora respondere a mensajes en el canal {canalname}",
+				"off": "Este servidor no tiene canales ignorados",
+				"canales": "Esta es la lista de canales ignorados\n<#{canales}>",
+				"opcion": "Debes poner una opcion, add | remove | list"
+			},
+			"lang": {
+				"idioma1": "<a:no:990150535258714133> Tienes que especificar el idioma nuevo para el Bot!\n**Idiomas disponibles**: `{idiomas}`",
+				"idioma2": "<a:no:990150535258714133> Tienes que especificar un idioma válido para el Bot!\n**Idiomas disponibles**: `{idiomas}`",
+				"idioma3": "Cambiado el idioma `{idioma}` a `{establecido}`"
+			},
+			"set-prefix": {
+				"error": "Introduce el nuevo prefix",
+				"error2": "El prefix es demasiado largo, intenta poner uno menor a 4 caracteres",
+				"error3": "Si quieres volver a mi prefix original usa `resetprefix`",
+				"title": "Cambiando prefix",
+				"desc": "El nuevo prefix ahora es `{argsxd}`"
+			}
+		},
+		"interaccion": {
+			"interacciones": {
+				"mencion": "Debes mencionar a alguien",
+				"angry": "<@{{user1}}> se ha enojado con <@{{user2}}>",
+				"angry2": "<@{{user1}}> se ha enojado",
+				"baka": "<@{{user1}}> le dijo baka a <@{{user2}}>",
+				"baka2": "<@{{user1}}> Baka!",
+				"confused": "<@{{user1}}> se encuentra confundido -c-",
+				"cringe": "<@{{user1}}> le ha dado cringe",
+				"cry": "<@{{user1}}> esta llorando",
+				"dance": "<@{{user1}}> esta bailando",
+				"deathnote": "<@{{user1}}> anoto a <@{{user2}}> en la death note",
+				"feed": "<@{{user1}}> le dio de comer a <@{{user2}}>",
+				"happy": "<@{{user1}}> se encuentra muy feliz",
+				"hi": "<@{{user1}}> esta saludando a <@{{user2}}>",
+				"hi2": "<@{{user1}}> esta saludando a todos",
+				"hug": "<@{{user1}}> abrazo a <@{{user2}}>",
+				"kill": "<@{{user1}}> asesino a <@{{user2}}>",
+				"kiss": "<@{{user1}}> beso a <@{{user2}}>",
+				"kiss2": "Te amas tanto?",
+				"laugh": "<@{{user1}}> se esta riendo",
+				"lick": "<@{{user1}}> esta lamiendo el cuerpo de <@{{user2}}>",
+				"neko": "Toma una chica neko",
+				"neko2": "Link",
+				"neko3": "[Click aqui]({{url}})",
+				"panic": "<@{{user1}}> esta teniendo panico",
+				"pat": "<@{{user1}}> acaricio a <@{{user2}}>",
+				"patear": "<@{{user1}}> le dio una patada a <@{{user2}}>",
+				"poke": "<@{{user1}}> esta picado el cuerpo de <@{{user2}}>",
+				"punch": "<@{{user1}}> le pego a <@{{user2}}>",
+				"run": "<@{{user1}}> esta corriendo de algo",
+				"sad": "<@{{user1}}> se puso triste",
+				"sip": "<@{{user1}}> esta tomando una taza de té",
+				"slap": "<@{{user1}}> abofeteó a <@{{user2}}>",
+				"sleep": "<@{{user1}}> se ha quedado dormido dormido 💤",
+				"smug": "<@{{user1}}> esta presumiendo",
+				"wasted": "<@{{user1}}> WASTED!!!"
+			}
+		},
+		"informacion": {
+			"botinfo": {
+				"info": "> <:bot:980589156977750048> • **Nombre**: `{bot}`\n > <:id:998140149718331503> • **ID**: `923455561113145375`\n > <:ping:991864868040884384> • **Ping**: `{ping}`\n > 🛰️ **Ping de la api**: `{pingapi}` \n> 📅 • **Fecha De Creacion**: <t:1640239362:R>\n> <:right2:999190066813481011> • **Prefix**: `!i`\n\n **Estadisticas**\n > 📁 • **Servidores**: `{servers}`\n> 👤 • **Usuarios**: `{usuarios}`\n\n**Estadisticas del Bot**\n> **<:link:980589157908897833> • Comandos**: `{comandos}`\n > **<:slash:996618753649418410> • Comandos Slash**: `{slash}`\n > **<:javascript:1000140369968775277> • Lenguaje:** `JavaScript`\n> **<:djs:989976293414158436> • Libreria**: `v{version}`\n> **<:js:989976291442835596> • Node --v**: `{node}`\n > **:timer: • Uptime**: `{actividad}` \n > :ram: • **Ram**: `{ram}`\n> <:CPU:1015023287128043520> • **CPU**: `{userUsage} MB System: {sysUsage} MB`\n> 💻 • **Plataform**: `{platform}`\n\n**Informacion extra**\n> <:dev:980594181787508747> • **Developers:**\n> <:owner:980590923903819938> • Ansiedad#4889",
+				"title": "Información General"
+			},
+			"help": {
+				"comando": "Información del comando <:comillas3:1081811445479645254>`{command}`<:comillas3:1081811445479645254>",
+				"description": "<:right2:999190066813481011> Descripción",
+				"usage": "<:right2:999190066813481011> Uso",
+				"example": "<:right2:999190066813481011> Ejemplo",
+				"category": "<:right2:999190066813481011> Categoria",
+				"cooldown": "<:right2:999190066813481011> Cooldown",
+				"alias": "<:right2:999190066813481011> Alias",
+				"permisos": "👤 Permisos requeridos",
+				"permisosbot": "🤖 Permisos de BOT requeridos",
+				"ayudacmd": "Ayuda detallada de un comando: `</help:1051914024784244827> option <comando>`",
+				"nohaycmd": ">>> *Todavía no hay comandos en esta categoría...*",
+				"comandox": "❌ **No se ha encontrado el comando que has especificado!**\nUsa </help:1051914024784244827> para ver los comandos y categorías!",
+				"comandos": "📖 Comandos:",
+				"ayudade": "Ayuda de {botsito}",
+				"desc": "Comando en detalle </help:1051914024784244827> `option <comando>`\n Lista de comandos </help:1051914024784244827> `option <categoria>`\nEl Bot tiene algun bug?\n Usa `{{prefix}} reporte <reporte>`",
+				"field": "❓ **__¿Quién soy?__**",
+				"field1": "👋 Hola **{{author}}**, mi nombre es **__{botsito1}__**\n🤯 Soy un BOT MULTIFUNCIONAL Incluyendo:\n<:1_:1073898144284278786>**ADMINISTRACIÓN\n<:1_:1073898144284278786> MODERACIÓN\n<:2_:1073898141365047296>MÚSICA**\n*y mucho más!*",
+				"field2": "📈 **__ESTADÍSTICAS__**",
+				"field3": "📁 **16** **Categorias**\n<:settings:997794627845369886> **{commands}** **Comandos**\n <:slash:996618753649418410> **{scommands}** **Slash Commands** \n 📁 **en {servers} Servidores**\n<:ping:991864868040884384> **`{ping}ms` Ping**\n <:clock:1004638691081330708> **Uptime: <t:{uptime}:R>** \n<:owner:980590923903819938> **Desarollado por** **[`Ansiedad`](https://discord.com/users/821258555180318720)**\n**<:cactusemoji:1077737198008418475> Host: [Cactus Nodes](https://discord.gg/9yCkBKJvrW)**",
+				"expirado": "Tu tiempo ha expirado! Vuelve a escribir `{{prefix}}help` para ver la ayuda de nuevo!",
+				"miralos": "Mira los comandos de {categoria}",
+				"soloel": "❌ **No puedes hacer eso! Solo {{autor}} puede hacerlo**"
+			},
+			"ping": {
+				"title": "Ping de {{client}}"
+			}
+		},
+		"bot": {
+			"invite": {
+				"tarta": "Robar tu tarta",
+				"tarta2": "Prepárarte una tarta",
+				"galletas": "Robarte las galletas",
+				"galletas2": "Prepárarte unas galletas",
+				"hack": "Hackearte",
+				"arbolito": "Dibujarte un arbolito",
+				"cancion": "Cantarte una canción para dormir",
+				"pollo": "Hacerte un caldo de pollo",
+				"te": "Elaborar té kombucha local atesanalmente",
+				"arbolito2": "Pintar un arbolito feliz",
+				"cuento": "Leerte un cuento para dormir",
+				"misterio": "Resolver un misterio con Scooby y sus amigos",
+				"crisis": "Tener una crisis exsitencial",
+				"canciones": "Grabar una nueva cinta de canciones",
+				"nitro": "Comprarte nitro",
+				"desc": " {{si}} • **Mejorar Tu Servidor**\n> {{si}} • **Moderar Tu Servidor**\n> {{si}} • **Configurar Tu Servidor**\n> {{no}} • **{{random}}**",
+				"label": "INVITAME",
+				"label2": "Mi servidor"
+			},
+			"pvc": {
+				"soporte": "Soporte",
+				"contacto": "Contacto",
+				"pagweb": "Pagina web",
+				"desc": "Mira los terminos de servicio aqui https://izibot.netlify.app/tos",
+				"extra": "Gracias por enviar tu reporte"
+			}
+		},
+		"utilidades": {
+			"afk": {
+				"reason": "Sin especificar",
+				"desc": "<@{{autor}}> AFK establecido, Avisare a quienes te mencionen\n**Razon del afk: {{razon}}**",
+				"desc2": "{{autor}} Tu estado AFK ha sido removido"
+			},
+			"appstore": {
+				"erro2": "No he podido encontrar esa aplicación",
+				"gratis": "GRATIS!",
+				"precio": "Precio",
+				"desarrollador": "Desarrollador",
+				"calificacion": "calificación"
+			},
+			"ascii": {
+				"error2": "El ASCII No puede tener mas de 25 palabras",
+				"error3": "El ASCII debe tener más de 2 letras"
+			},
+			"avatar": {
+				"title": "Avatar de {{user}}"
+			},
+			"choose": {
+				"title": "Falta de argumentos",
+				"desc": "Ejmplo: opcion1 | opcion2",
+				"title2": ":incoming_envelope: | Hora de elegir",
+				"field": ":mag_right: | Elijo:",
+				"error": "Error:"
+			},
+			"coloraleatorio": {
+				"title": "Hex: {hex}\nRGB {rgb}",
+				"field": "HEX",
+				"field2": "RGB"
+			},
+			"confesion": {
+				"error": "Debes indicar si la confesion sera privada o no\n Usa `false` para que sea publica, Usa `true` para que sea privada",
+				"error2": "Opción incorrecta",
+				"error3": "Debes escribir tu confesion",
+				"error4": "No hay un canal de confesiones configurado en el servidor",
+				"author": "Confesion de {{autor}}",
+				"enviado": "Su confesion se ha enviado a <#{channel}>",
+				"title": "Confesion anónima"
+			},
+			"emojiid": {
+				"error": "El emoji `{{emoji}}` No es valido o no lo encontre en el servidor",
+				"field": "**Syntax**",
+				"field2": "**Ouput**",
+				"footer": "ID: {{id}}"
+			},
+			"firstmsg": {
+				"title": "Este es el primer mensaje de {{canal}}",
+				"desc": "Mensaje: **{{msg}}**",
+				"field": "Autor:",
+				"field2": "ID del autor",
+				"field3": "ID del mensaje",
+				"field4": "Tiempo del mensaje"
+			},
+			"github": {
+				"errDesc": "Porfavor escribe un nombre de usuario",
+				"err": "Analizando cuenta, porfvaor espera....",
+				"err2": "El usuario no existe",
+				"name": "Nombre",
+				"type": "Tipo de cuenta",
+				"org": "Organización",
+				"blog": "Blog",
+				"ubi": "Ubicación",
+				"email": "Email",
+				"bio": "Biografía",
+				"twitter": "Twitter",
+				"rpublic": "Repositorios publicos",
+				"seguidores": "Seguidores",
+				"siguiendo": "Siguiendo",
+				"ccreate": "Cuenta creada"
+			},
+			"hex": {
+				"error": "Porfavor, proporciona un código hex valido",
+				"desc": "Hex: {hex}\nRgb {rgb}",
+				"field": "HEX",
+				"field2": "RGB"
+			},
+			"jumbo": {
+				"title": "{{emoji}}",
+				"label": "Descargar emoji"
+			},
+			"math": {
+				"error": "¿Y... Exactamente que quieres que calcule? >.<",
+				"error2": "Solo se puenen poner números, exceptuando los signos que son estos, `(+, *, -, /, x, ~)`",
+				"error3": "Debes colocar los signos!",
+				"error4": "¿Y... el segundo número? >.<",
+				"title": "Nuevo problema!",
+				"field": "Pregunta",
+				"field2": "Solución",
+				"error5": "Ocurrio un error"
+			},
+			"motivation": {
+				"desc": "**{text}**\n\nDe: {{autor}} para {{user}}"
+			},
+			"randomuser": {
+				"title": "Usuario seleccionado:",
+				"desc": "**<@{{user}}>**\nID: {{userid}}",
+				"field": "Fecha de union al servidor"
+			},
+			"remindme": {
+				"error": "Debes ingresar el recordatorio y el tiempo\nEjemplo: `remindme <tiempo> [mensaje]`",
+				"remind": "<a:alarm:1004638708877766676> {{autor}} Recuerda:\n {{mensaje}}",
+				"error2": "No puede ser mayor de 60 segundos",
+				"error3": "No puede ser mayor a 60 minutos",
+				"error4": "No puede ser mayor a 24 horas",
+				"segundos": "<a:alarm:1004638708877766676> Acabas de establecer un recordatorio en `{time}` segundos",
+				"minutos": "<a:alarm:1004638708877766676> Acabas de establecer un recordatorio en `{time}` minutos",
+				"horas": "<a:alarm:1004638708877766676> Acabas de establecer un recordatorio en `{time}` horas",
+				"mal": "Lo estas haciendo mal es:\n<1 - 60>s <recordatorio>\n<1 - 60>m <recordatorio>\n<1 - 24>h <recordatorio>\n ____Ejemplo:____\n1h Recordar ir a sacar un perro"
+			},
+			"serverlogo": {
+				"title": "Logo del servidor {{guild}}"
+			},
+			"acortarurl": {
+				"error": "introduce una url para acortar",
+				"error2": "Hubo un error al acortar la url `{{url}}`",
+				"acortada": "URL acortada: {{url}}",
+				"acortada2": "URL acortada con la etiqueta: {{url}}"
+			},
+			"sugerencia": {
+				"sug1": "**Sugerencia:**\n>>> {{sug}}",
+				"error": "Debes escribir tu sugerencia",
+				"error2": "No hay un canal de **sugerencias** en el **servidor**",
+				"author": "Nueva sugerencia de {{autor}}",
+				"votosp": "Votos positivos",
+				"votosn": "Votos negativos",
+				"quien": "¿Quien ha votado?",
+				"mandada": "Sugerencia mandada con exito"
+			},
+			"translate": {
+				"args1": "Debes especificar el idioma al que va a traducir el texto.",
+				"condicion1": "No ha especificado un texto válido",
+				"condicion2": "La traducción no puede contener más de ** 1024 ** caracteres.",
+				"title": "Traducción",
+				"field1": "Texto",
+				"field2": "Texto traducido",
+				"footer": "Lenguaje al que se tradujo: {{lang}}"
+			},
+			"banner": {
+				"desc": "El usuario <@{{user}}> no tiene **banner o color**",
+				"title": "No tiene banner pero aqui esta su color",
+				"desc2": "Banner de {{user}}"
+			}
+		}
+	}
+}

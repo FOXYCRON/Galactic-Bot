@@ -1,0 +1,9 @@
+{
+	"cmds": {
+		"informacion": {
+			"ping": {
+				"title": "Ping de {{client}}"
+			}
+		}
+	}
+}

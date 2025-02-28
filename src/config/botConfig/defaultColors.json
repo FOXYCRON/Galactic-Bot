@@ -1,0 +1,46 @@
+{
+    "colores": {
+        "a": "#5764F2",
+        "Default": "#000000",
+        "Aqua": "#1ABC9C",
+        "DarkAqua": "#11806A",
+        "Green": "#57F287",
+        "DarkGreen": "#1F8B4C",
+        "Blue": "#3498DB",
+        "DarkBlue": "#206694",
+        "Purple": "#9B59B6",
+        "DarkPurple": "#71368A",
+        "LuminousVividPink": "#E91E63",
+        "DarkVividPink": "#AD1457",
+        "Gold": "#F1C40F",
+        "DarkGold": "#C27C0E",
+        "Orange": "#E67E22",
+        "DarkOrange": "#A84300",
+        "Red": "#ED4245",
+        "DarkRed": "#992D22",
+        "Grey": "#95A5A6",
+        "DarkGrey": "#979C9F",
+        "DarkerGrey": "#7F8C8D",
+        "LightGrey": "#BCC0C0",
+        "Navy": "#34495E",
+        "DarkNavy": "#2C3E50",
+        "Yellow": "#FFFF00"
+    },
+    "officialColor": {
+        "White": "#FFFFFF",
+        "Greyple": "#99AAb5",
+        "Black": "#23272A",
+        "DarkButNotBlack": "#2C2F33",
+        "NotQuiteBlack": "#23272A",
+        "Blurple": "#5865F2",
+        "Green": "#57F287",
+        "Yellow": "#FEE75C",
+        "Fuchsia": "#EB459E",
+        "Red": "#ED4245"
+    },
+    "roleColors": {
+        "Unnamed1": "#607D8B",
+        "Unnamed2": "#546E7A",
+        "BackGround": "#36393F"
+    }
+}

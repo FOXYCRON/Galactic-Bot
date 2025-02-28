@@ -1,0 +1,41 @@
+{
+    "ownerIDS": ["456941687588126721", "821258555180318720"],
+    "bot": {
+        "webhook": "https://discord.com/api/webhooks/1074902049076031549/L-wvSZSxh7aS0OJsAWHR5nEJuDb1FBeB8mqTOjJzhhP9Po7GvBiMUJ0iaGe3drK8XyMv",
+        "version": "0.0.1",
+        "mongo": "mongodb+srv://mongosito8:pX9G7313RWRh8ed1@cluster0.f3rfcve.mongodb.net/?retryWrites=true&w=majority"
+    },
+    "embeds": {
+        "powered": "Powered by Izi Bot#5216"
+    },
+    "colores": {
+        "random": "Random",
+        "default": "#c564f7",
+        "violet": "#c564f7",
+        "purpledark": "#6a006a",
+        "purplemedium": "#a958a5",
+        "purplelight": "#c481fb",
+        "orange": "#ffa500",
+        "gold": "#daa520",
+        "reddark": "#8e2430",
+        "redlight": "#ff0000",
+        "bluedark": "#3b5998",
+        "cyan": "#5780cd",
+        "bluelight": "#ace9e7",
+        "aqua": "#33a1ee",
+        "pink": "#ff9dbb",
+        "greendark": "#2ac075",
+        "greenlight": "#a1ee33",
+        "white": "#f9f9f6",
+        "cream": "#ffdab9",
+        "rosa": "#ff8c95",
+        "DarkerGrey": "#7F8C8D"
+    },
+    "emotes": {
+        "no": "<a:no:990150535258714133>",
+        "si": "<a:success:978388737031540777>",
+        "success": "<a:si:990150545782222899>",
+        "error": "<a:no:990150535258714133>",
+        "discord_logo": "<:DiscordLogo:1074157284982276096>"
+    }
+}

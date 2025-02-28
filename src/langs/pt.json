@@ -1,0 +1,14 @@
+{
+	"cmds": {
+		"informacion": {
+			"ping": {
+				"title": "Ping de {{client}}"
+			}
+		},
+		"messageCreate": {
+			"cmds2": {
+				"cooldown": "No puedes usar el comando durante {{seg}} segundos"
+			}
+		}
+	}
+}
