@@ -16,7 +16,7 @@ module.exports = class ServerInfoCommand extends Command {
 
     async run(client, message, args) {
   
-            // Obtener el prefix del servidor
+            // Obtener el prefix del servido
             const guildId = message.guild.id; // ID del servidor
             const prefixData = await db.findOne({ guildId });
         
