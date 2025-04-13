@@ -54,7 +54,7 @@ module.exports = class extends Client {
         const estados = [
              `Estoy en ${this.guilds.cache.size.toLocaleString()} servidores.`,
              `${this.channels.cache.size.toLocaleString()} canales.`,
-             `${this.guilds.cache.reduce((a, g) => a + (g.memberCount || 0), 0).toLocaleString()} usuarios me pueden ver.`,*/
+             `${this.guilds.cache.reduce((a, g) => a + (g.memberCount || 0), 0).toLocaleString()} usuarios me pueden ver.`,
              `${this.guilds.cache.reduce((total, guild) => total + guild.channels.cache.filter(c => c.type === ChannelType.GuildVoice).size, 0)} canales de voz.`,
              'Usa g.bot-suggest para mandar tu sugerencia.',
              'Manda tu reporte del bot con g.bug-report.',
