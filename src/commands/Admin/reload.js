@@ -5,6 +5,7 @@ module.exports = class Reload extends Command {
 	constructor() {
 		super({
 			name: 'reload',
+			alias: ['restarted'],
 			description: 'Actualiza la lista de comandos del bot.',
 			cooldown: 5,
 			owner: true,

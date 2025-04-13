@@ -6,7 +6,7 @@ module.exports = class Eval extends Command {
 	constructor() {
       super({
             name: 'servermc',
-            alias: ['minecraft-server'],
+            alias: ['minecraft-server', 'mcserver'],
             usage: ['<listening/watching/playing> <status>', '<listening/watching/playing> <estado>'],
             description: ['Minecraft server information.', 'Informacion de un servidor de minecraft.'],
             cooldown: 5,
