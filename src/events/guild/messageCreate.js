@@ -15,6 +15,77 @@ module.exports = class messageCreate extends Event {
 	async run(message) {
 		if (!message.guild || !message.channel || message.author.bot || message.channel.type === 'dm') return;
 
+		/* ================================================================= */
+		/* ----------------------- [ SISTEMA INTERCHAT ] ------------------- */
+		/* ================================================================= */
+		if (message.channel.name === "interchat") {
+			// Filtramos los demás canales quitando ya el canal actual para los envíos externos
+			let canalesExternos = this.client.channels.cache.filter(x => x.name === 'interchat' && x.id !== message.channel.id);
+			
+			const linksProhibidos = ["discord.gg", "discord.me", "discord.io/", "discordapp.com/invite", "https:", ".com", ".net"];
+
+			// Comprobamos si el mensaje tiene invitaciones o links externos (Moderación)
+			if (linksProhibidos.some(word => message.content.toLowerCase().includes(word))) {
+				message.delete().catch(() => {});
+				return message.reply('No se permiten invitaciones o enlaces en el interchat.').then(response => {
+					setTimeout(() => response.delete().catch(() => {}), 5000);
+				});
+			} else {
+				
+				// 1. EMBED PARA LOS DEMÁS SERVIDORES (Destino - Muestra quién eres y de qué server vienes)
+				const embedDestino = new EmbedBuilder()
+					.setAuthor({ 
+						name: `${message.author.tag}`, 
+						iconURL: message.author.displayAvatarURL({ dynamic: true }) 
+					}) 
+					.setFooter({ 
+						text: "Servidor: " + `${message.guild.name}`, 
+						iconURL: this.client.user.displayAvatarURL({ dynamic: true }) 
+					})
+					.setDescription(message.content || " ")
+					.setColor("Random")
+					.setTimestamp();
+
+				// 2. EMBED PARA TU PROPIO SERVIDOR (Origen - Te avisa que tú lo mandaste desde ahí)
+				const embedOrigen = new EmbedBuilder()
+					.setAuthor({ 
+						name: `💬 Enviado por: (${message.author.username})`, 
+						iconURL: message.author.displayAvatarURL({ dynamic: true }) 
+					}) 
+					.setDescription(message.content || " ")
+					.setColor("#00FF7F") // Color verde brillante fijo para identificar que es el tuyo
+					.setFooter({ 
+						text: "Enviado con exito", 
+						iconURL: this.client.user.displayAvatarURL({ dynamic: true }) 
+					})
+					.setTimestamp();
+
+				// Si el usuario adjuntó una imagen, la agregamos a ambos embeds
+				if (message.attachments.size > 0) {
+					const imagenURL = message.attachments.first().proxyURL;
+					embedDestino.setImage(imagenURL);
+					embedOrigen.setImage(imagenURL);
+				}
+
+				// 🌟 ENVIAR LOCAL: Mandamos el embed de origen directamente a tu canal actual
+				message.channel.send({ embeds: [embedOrigen] }).catch((err) => console.log("Error al enviar embed local: " + err));
+
+				// 🌟 ENVIAR EXTERNOS: Enviamos el embed de destino a los otros servidores con el canal "ts"
+				if (canalesExternos.size > 0) {
+					canalesExternos.forEach(canal => {
+						canal.send({ embeds: [embedDestino] }).catch(() => {});
+					});
+				}
+
+				// Detenemos el flujo aquí usando 'return' sin borrar tu mensaje de texto original
+				return;
+			}
+		}
+		/* ================================================================= */
+		/* --------------------- [ FIN SISTEMA INTERCHAT ] ----------------- */
+		/* ================================================================= */
+
+		// Carga de bases de datos para comandos normales
 		const [data, prefixData] = await Promise.all([
 			Schema.findOne({ guildID: message.guild.id }),
 			db.findOne({ guildId: message.guild.id }),
@@ -44,7 +115,7 @@ module.exports = class messageCreate extends Event {
 				const hasPermission = (channel, permission) => channel.permissionsFor(message.guild.members.me).has(permission);
 				if (!hasPermission(message.channel, 'ViewChannel') || !hasPermission(message.channel, 'SendMessages') || !hasPermission(message.channel, 'EmbedLinks')) {
 					return message.reply({
-						content: this.client.langs.__({ phrase: 'events.messageCreate.permisos.permisosEmbeds', locale: data.lang }),
+						content: client.langs.__({ phrase: 'events.messageCreate.permisos.permisosEmbeds', locale: data.lang }),
 					}).catch((err) =>
 						console.log('Error we ' + err),
 					);
@@ -103,7 +174,7 @@ module.exports = class messageCreate extends Event {
 						.setColor('Red')
 						.setTitle('Error')
 						.setDescription(reply)
-							.setFooter({ text: message.author.username, iconURL: message.author.avatarURL() });
+						.setFooter({ text: message.author.username, iconURL: message.author.avatarURL() });
 
 					return message.channel.send({ embeds: [errorembed] });
 				}
@@ -120,7 +191,6 @@ module.exports = class messageCreate extends Event {
 					if (now < expirationTime) {
 						const timeLeft = (expirationTime - now) / 1000;
 						return message.channel.send({ content: `No puedes usar el comando durante ${Math.round(timeLeft.toFixed(1))} segundo${Math.round(timeLeft.toFixed(1)) !== 1 ? 's' : ''}` });
-						// return message.channel.send(message.client.langs.__({ phrase: 'events.messageCreate.cmds2.cooldown', locale: data.lang }, { seg: Math.round(timeLeft.toFixed(1)) }));
 					}
 				}
 

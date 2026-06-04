@@ -3,15 +3,7 @@
     "bot": {
         "webhook": "https://discord.com/api/webhooks/1074902049076031549/L-wvSZSxh7aS0OJsAWHR5nEJuDb1FBeB8mqTOjJzhhP9Po7GvBiMUJ0iaGe3drK8XyMv",
         "version": "0.0.1",
-        "mongo": "mongodb+srv://dashboard:irvinadrian5@cluster0.6k029.mongodb.net/?appName=Cluster0",
-        "token": "TU_DISCORD_TOKEN_AQUI"
-    },
-    "minecraft": {
-        "host": "tu_servidor_de_minecraft",
-        "port": 25565,
-        "username": "tu_usuario_minecraft",
-        "password": "tu_contraseña_minecraft",
-        "version": "1.16.4"
+        "mongo": "mongodb+srv://dashboard:irvinadrian5@cluster0.6k029.mongodb.net/?appName=Cluster0"
     },
     "embeds": {
         "powered": "Powered by Izi Bot#5216"
