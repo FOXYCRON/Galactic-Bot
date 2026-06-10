@@ -25,12 +25,25 @@ module.exports = class Avatar extends Command {
 		if (args[0] === "!w") return message.reply("Si quieres volver a mi prefix original usa `resetprefix`")
 		if (args[0] === "!W") return message.reply("Si quieres volver a mi prefix original usa `resetprefix`")
 
+		// 🌟 Si el servidor no está registrado en la base de datos, lo creamos con ID, Nombre y Prefijo
 		if (!prefixdatabase) {
-			const nuevadb = await db.create({ guildId: message.guild.id, prefix: `${nuevoprefix}` })
-			nuevadb.save()
+			const nuevadb = await db.create({ 
+				guildId: message.guild.id, 
+				guildName: message.guild.name, // 📌 Guardamos el nombre actual
+				prefix: `${nuevoprefix}` 
+			})
+			await nuevadb.save()
 		}
+		
+		// 🌟 Si ya existía, actualizamos tanto el prefijo nuevo como el nombre actual (por si lo cambiaron en Discord)
 		if (prefixdatabase) {
-			await db.findOneAndUpdate({ guildId: message.guild.id, prefix: `${nuevoprefix}` })
+			await db.findOneAndUpdate(
+				{ guildId: message.guild.id }, // 🔍 Filtro: Buscamos por ID
+				{ 
+					guildName: message.guild.name, // 📌 Actualizamos el nombre en Atlas
+					prefix: `${nuevoprefix}`        // 📌 Actualizamos el prefijo
+				}
+			)
 		}
 
 		const embed = new Discord.EmbedBuilder()
